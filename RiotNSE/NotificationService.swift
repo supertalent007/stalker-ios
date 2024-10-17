@@ -91,7 +91,7 @@ class NotificationService: UNNotificationServiceExtension {
 
         // Set static application settings
         configuration.setupSettings()
-        
+
         if DataProtectionHelper.isDeviceInRebootedAndLockedState(appGroupIdentifier: MXSDKOptions.sharedInstance().applicationGroupIdentifier) {
             //  kill the process in this state, this leads for the notification to be displayed as came from APNS
             exit(0)

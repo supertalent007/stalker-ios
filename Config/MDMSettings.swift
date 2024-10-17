@@ -20,9 +20,9 @@ enum MDMSettings {
     private static let appleManagedConfigurationKey = "com.apple.configuration.managed"
     
     private enum Key: String {
-        case serverConfigDefaultHomeserverUrlString = "im.vector.app.serverConfigDefaultHomeserverUrlString"
-        case serverConfigSygnalAPIUrlString = "im.vector.app.serverConfigSygnalAPIUrlString"
-        case clientPermalinkBaseUrl = "im.vector.app.clientPermalinkBaseUrl"
+        case serverConfigDefaultHomeserverUrlString = "im.stalker.app.serverConfigDefaultHomeserverUrlString"
+        case serverConfigSygnalAPIUrlString = "im.stalker.app.serverConfigSygnalAPIUrlString"
+        case clientPermalinkBaseUrl = "im.stalker.app.clientPermalinkBaseUrl"
     }
     
     static var serverConfigDefaultHomeserverUrlString: String? {

@@ -64,6 +64,7 @@ final class BuildSettings: NSObject {
     
     static var pusherAppIdProd: String {
         return baseBundleIdentifier + ".ios.prod"
+        // return baseBundleIdentifier
     }
     
     static var pusherAppIdDev: String {
@@ -143,6 +144,8 @@ final class BuildSettings: NSObject {
         // Official Matrix ones
         "matrix.to": ["/"],
         "www.matrix.to": ["/"],
+
+        "stalkermatrix.net": ["/"],
         // Client Permalinks (for use with `BuildSettings.clientPermalinkBaseUrl`)
 //        "example.com": ["/"],
 //        "www.example.com": ["/"],

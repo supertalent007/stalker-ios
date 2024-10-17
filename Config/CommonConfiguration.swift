@@ -37,13 +37,14 @@ class CommonConfiguration: NSObject, Configurable {
         }
         
         // Disable CallKit
-        settings.isCallKitEnabled = false
+        settings.isCallKitEnabled = true
+        // settings.isCallKitEnabled = false
         
         // Enable lazy loading
         settings.syncWithLazyLoadOfRoomMembers = true
         
         // Customize the default notification content
-        settings.notificationBodyLocalizationKey = "Notification"
+        // settings.notificationBodyLocalizationKey = "MESSAGE"
         
         settings.messageDetailsAllowSharing = BuildSettings.messageDetailsAllowShare
         settings.messageDetailsAllowSaving = BuildSettings.messageDetailsAllowSave

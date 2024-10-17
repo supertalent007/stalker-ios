@@ -3,16 +3,16 @@ import FLAnimatedImage
 
 @IBDesignable
 public class ElementView: UIView {
-    
+
     public struct Defaults {
-        public static let size = CGSize(width: 130.16, height: 127.75)
-        public static let backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.021)
+        // Set default background color to black
+        public static let backgroundColor = UIColor.black 
     }
 
     public var gifImageView: FLAnimatedImageView!
 
     public override var intrinsicContentSize: CGSize {
-        return Defaults.size
+        return super.intrinsicContentSize
     }
 
     public override init(frame: CGRect) {
@@ -33,7 +33,8 @@ public class ElementView: UIView {
 
     private func createGifView() {
         // Initialize the FLAnimatedImageView
-        gifImageView = FLAnimatedImageView(frame: CGRect(x: 0, y: 0, width: Defaults.size.width, height: Defaults.size.height))
+        gifImageView = FLAnimatedImageView()
+        gifImageView.translatesAutoresizingMaskIntoConstraints = false
         gifImageView.contentMode = .scaleAspectFit
         
         // Load the GIF from the bundle
@@ -49,5 +50,13 @@ public class ElementView: UIView {
 
         // Add the GIF view to the main view
         addSubview(gifImageView)
+
+        // Set up constraints to make the gifImageView fill the entire ElementView
+        NSLayoutConstraint.activate([
+            gifImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            gifImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            gifImageView.topAnchor.constraint(equalTo: topAnchor),
+            gifImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 }
