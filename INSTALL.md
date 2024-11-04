@@ -43,7 +43,7 @@ By using `bundler` you will ensure to use the right versions of build tools used
 $ gem install bundler
 ```
 
-## Choose Matrix SDKs version to build
+## Choose Stalker SDKs version to build
 
 To choose the [MatrixSDK](https://github.com/matrix-org/matrix-ios-sdk) version (and depending OLMKit) you want to develop and build against you will have to modify the right definitions of `$matrixSDKVersion` variable in the `Podfile`. 
 

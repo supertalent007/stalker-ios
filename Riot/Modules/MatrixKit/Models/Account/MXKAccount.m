@@ -1647,7 +1647,7 @@ static NSArray<NSNumber*> *initialSyncSilentErrorsHTTPStatusCodes;
             [self.mxSession startWithSyncFilter:syncFilter onServerSyncDone:^{
                 MXStrongifyAndReturnIfNil(self);
 
-                MXLogDebug(@"[MXKAccount] %@: The session is ready. Matrix SDK session has been started in %0.fms.", self.mxCredentials.userId, [[NSDate date] timeIntervalSinceDate:self->openSessionStartDate] * 1000);
+                MXLogDebug(@"[MXKAccount] %@: The session is ready. Stalker SDK session has been started in %0.fms.", self.mxCredentials.userId, [[NSDate date] timeIntervalSinceDate:self->openSessionStartDate] * 1000);
 
                 [self setUserPresence:self.preferredSyncPresence andStatusMessage:nil completion:nil];
 
@@ -1748,7 +1748,7 @@ static NSArray<NSNumber*> *initialSyncSilentErrorsHTTPStatusCodes;
     }
     else if (mxSession.state == MXSessionStateStoreDataReady || mxSession.state == MXSessionStateSyncInProgress)
     {
-        // Remove listener (if any), this action is required to handle correctly matrix sdk handler reload (see clear cache)
+        // Remove listener (if any), this action is required to handle correctly Stalker SDK handler reload (see clear cache)
         if (userUpdateListener)
         {
             [mxSession.myUser removeListener:userUpdateListener];

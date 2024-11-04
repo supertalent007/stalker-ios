@@ -1273,7 +1273,7 @@
     NSString* message = error.localizedDescription;
     NSDictionary* dict = error.userInfo;
     
-    // detect if it is a Matrix SDK issue
+    // detect if it is a Stalker SDK issue
     if (dict)
     {
         NSString* localizedError = [dict valueForKey:@"error"];

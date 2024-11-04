@@ -26,7 +26,7 @@ enum LocationSharingCoordinateType {
 }
 
 enum LiveLocationSharingTimeout: TimeInterval {
-    // Timer are in milliseconde because timestamp are in millisecond in Matrix SDK
+    // Timer are in milliseconde because timestamp are in millisecond in Stalker SDK
     case short = 900_000 // 15 minutes
     case medium = 3_600_000 // 1 hour
     case long = 28_800_000 // 8 hours
